@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRIYANSHU YADAV 🎆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+
+<header class="header">
+    <a class="logo"> 🎁 As A Friend  New Year Gift ❤️</a>
+</header>
+
+<section class="home">
+    <div class="home-content">
+        <h3>Dear Neha Tripathi 💖</h3>
+        <h1>Happy New Year 2026 🎆</h1>
+        <h3>You are <span class="text"></span></h3>
+
+        <p>
+            This  is a small surprise for you ✨ <br> 
+            May this year bring smiles, peace, and beautiful moments 🌸
+        </p>
+
+        <div class="social">
+            <i class='bx bxs-heart'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-gift'></i>
+        </div>
+
+        <button class="btn" onclick="showMessage()">Plz Open Me  💝</button>
+    </div>
+
+    <div class="photo-box">
+        <img src="images/pk.png" alt="pk">
+    </div>
+
+    <div class="floating-images">
+        <img src="images/pk4.png" class="float-img" alt="Image 1">
+        <img src="images/pk5.png" class="float-img" alt="Image 2">
+        <img src="images/pk10.png" class="float-img" alt="Image 3">
+        <img src="images/pk2.png" class="float-img" alt="Image 4">
+    </div>
+
+</section>
+
+<section class="quotes">
+    <h2>This Is For You ✨</h2>
+    <div class="quote-card">“May your 2026 be as beautiful as your smile.” 🌸</div>
+    <div class="quote-card">“New year, new dreams, and endless happiness.” 💫</div>
+    <div class="quote-card">“You deserve all the love this year has to offer.” 💖</div>
+</section>
+
+<script src="script.js"></script>
+
+<!-- Gift Popup -->
+<div id="giftPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">×</span>
+
+        <h2>💖 Ye Apke Liye 💖</h2>
+
+        <!-- Video1 -->
+         <video id="video1" class="popup-video" controls style="display: flex;">
+            <source src="images/pk11.mp4" type="video/mp4">
+        </video>
+
+    
+        <!-- Video2 -->
+        <video id="video2" class="popup-video" controls style="display:none;">
+            <source src="images/gift.mp4" type="video/mp4">
+        </video>
+        <!-- Next Button -->
+         <button id="nextBtn" class="btn" onclick="playNextVideo()">
+            Next ▶
+         </button>
+
+        <p>
+            <br>
+            Neha, may 2026 bring you happiness, peace,
+            and everything your heart wishes for. 🎆✨
+        </p>
+    </div>
+</div>
+<!-- Butterflies -->
+<div id="butterflyContainer"></div>
+
+<audio id="fairySound" preload="auto">
+    <source src="images/fairy.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

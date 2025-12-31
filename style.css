@@ -1,0 +1,368 @@
+/* ================== GLOBAL ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    color: oklab(75.063% -0.13749 0.0249);
+    overflow-x: hidden;
+}
+
+/* ================== BACKGROUND IMAGE ================== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(8,27,41,0.3), rgba(8,27,41,0.2)),
+        url("images/pk1.png");  /* adjust path if needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3; /* behind everything */
+}
+
+/* ================== STARS BACKGROUND ================== */
+.stars,
+.stars2,
+.stars3 {
+    position: fixed;
+    inset: 0;
+    width: 1000%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2; /* above background image, below content */
+}
+
+/* Small stars */
+.stars {
+    background:
+        radial-gradient(30px 30px at 200px 300px, #7634c1, transparent),
+        radial-gradient(30px 30px at 100px 150px, #910303, transparent),
+        radial-gradient(30px 30px at 300px 200px, #fff, transparent),
+        radial-gradient(30px 30px at 500px 80px, #efb522, transparent),
+        radial-gradient(30px 30px at 700px 250px, #0dbfb9, transparent),
+        radial-gradient(30px 30px at 900px 120px, #fff, transparent);
+    background-size: 1000px 1000px;
+    animation: starsMove 60s linear infinite;
+}
+
+/* Medium stars */
+.stars2 {
+    background:
+        radial-gradient(40px 40px at 500px 600px, #9f1919, transparent),
+        radial-gradient(40px 40px at 200px 300px, #c53c8c18, transparent),
+        radial-gradient(40px 40px at 400px 150px, #ddd, transparent);
+    background-size: 800px 8040px;
+    animation: starsMove 120s linear infinite;
+}
+
+/* Big stars */
+.stars3 {
+    background:
+        radial-gradient(50px 4px at 150px 200px, #2e71a0, transparent),
+        radial-gradient(50px 50px at 350px 400px, #741010, transparent);
+    background-size: 600px 600px;
+    animation: starsMove 180s linear infinite;
+}
+
+@keyframes starsMove {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+}
+
+/* ================== HEADER ================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background: rgba(4, 0, 2, 0.3);
+    backdrop-filter: blur(0%);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(18, 239, 255);
+    text-decoration: none;
+    font-style: calc(100% + 1vw);
+    pointer-events: none;
+}
+
+/* ================== HOME ================== */
+.home {
+    min-height: 100vh;
+    padding: 120px 10% 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    color: bisque;
+}
+
+.home-content {
+    max-width: 1000px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: 8px;
+    color: rgb(233, 233, 233);
+}
+
+.home-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: rgb(228, 235, 18);
+}
+
+.home-content h3 span {
+    color: #0ef;
+    font-size: 2rem;
+}
+
+.home-content p {
+    margin: 15px 0 25px;
+    line-height: 1.6;
+    opacity: 80%;
+    font-size: 20px;
+    color: #e8b1e1;
+    transition: 0.3s;
+
+}
+
+
+/* ================== SOCIAL ICONS ================== */
+.social {
+    margin-bottom: 25px;
+}
+
+.social i {
+    font-size: 46px;
+    margin-right: 12px;
+    color: #0ef;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    transform: scale(1.3);
+}
+
+/* ================== BUTTON ================== */
+.btn {
+    padding: 10px 60px;
+    border-radius:90px;
+    border: none;
+    background: rgb(130, 236, 24);
+    color: #081b29;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgb(130, 236, 24);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 35px rgb(15, 214, 190);
+    transform: scale (1.3);
+
+}
+/* ================== PHOTO BOX ================== */
+.photo-box img {
+    width: 470px;
+    border-radius: 100%;
+    box-shadow: 0 0 70px rgba(238, 199, 6, 0.6);
+}
+
+/* ================== QUOTES ================== */
+.quotes {
+    padding: 60px 20%;
+    text-align: center;
+    border-color: #e8b1e1;
+    border-style: groove;
+    opacity: 80;
+    border-radius: 20%;
+}
+
+.quotes h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #0ef;
+}
+
+.quote-card {
+    background: rgba(196, 15, 142, 0.08);
+    padding: 18px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 35px;
+    box-shadow: 0 0 30px rgba(255, 0, 150, 0.4);
+    font-size: 28px;
+    font-display: swap;
+    backdrop-filter: blur(60%);
+}
+
+/* ================== POPUP ================== */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(213, 195, 195, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #081b29;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 238, 255, 0.5);
+    animation: popup 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes popup {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #0ef;
+}
+
+.popup-img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.popup-video {
+    width: 60%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin: 15px auto;
+    padding-top: 0rem;
+    display: block;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-box img {
+        width: 250px;
+    }
+}
+
+#nextBtn {
+    margin-top: 15px;
+}
+
+/* ================== FLOATING IMAGES ================== */
+.floating-images {
+    position: absolute;
+    inset: 0;
+    pointer-events: none; /* clicks pass through */
+    overflow: visible;
+    z-index: -1; /* behind content but in front of background */
+}
+
+.float-img {
+    position: absolute;
+    width: 250px;           /* size of images */
+    height: 270px;
+    border-radius: 70%;     /* circular images */
+    object-fit: cover;
+    backface-visibility: visible;
+    animation: floatMove 5s ease-in-out infinite;
+}
+
+/* OPTIONAL: different animation delays for each image */
+.float-img:nth-child(1) { top: 2%; left: 15%; animation-delay: 0s; }
+.float-img:nth-child(2) { bottom: -40%; right: 70%; animation-delay: 2s; }
+.float-img:nth-child(3) { top: 60%; left: 40%; animation-delay:5s; }
+.float-img:nth-child(4) { bottom: -50%; left: 60%; animation-delay: 8s; }
+
+/* Floating animation */
+@keyframes floatMove {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    25%  { transform: translate(15px, -10px) rotate(30deg); }
+    50%  { transform: translate(15px, -15px) rotate(20deg); }
+    80%  { transform: translate(10px, -15px) rotate(20deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+/* ================== MAGIC BUTTERFLIES ================== */
+#butterflyContainer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* ================= BUTTERFLY STYLES ================= */
+.butterfly {
+    position: absolute;
+    width: 80px;  /* base size */
+    height: 80px;
+    background: url('images/butterfly.png') no-repeat center/contain; /* replace with your butterfly image */
+    pointer-events: none;
+    z-index: 1000;
+    animation: floatButterfly 8s linear forwards;
+}
+
+/* Floating motion with slight rotation */
+@keyframes floatButterfly {
+    0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+    10%  { opacity: 1; }
+    50%  { transform: translate(calc(50px * var(--randX)), -200px) rotate(0deg); }
+    80%  { transform: translate(calc(-50px * var(--randX)), -400px) rotate(0deg); }
+    100% { transform: translate(calc(50px * var(--randX)), -600px) rotate(0deg); opacity: 0; }
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #fff 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 1001;
+    animation: sparkleAnim 1.5s linear forwards;
+}
+
+@keyframes sparkleAnim {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
+}
